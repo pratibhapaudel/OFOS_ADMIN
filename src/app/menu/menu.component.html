@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-12">
+            <a class="btn btn-primary mb-2 pull-right" routerLink="/menuadd">Add Menu</a>
+
+            <table class="table table-bordered bg-white">
+                <thead>
+                    <tr>
+                        <th scope="col">S.NO</th>
+                        <th scope="col">Menu Name</th>
+                        <th scope="col">Description</th>
+                  
+                      
+                        <th scope="col">Price</th>
+                        <th scope="col">Image</th>
+
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items;index as i">
+                        <th scope="row">{{i+1}}</th>
+                      
+                        <td>{{item.menu_name}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price}}</td>
+                        <td class="text-center"> <img style="    width: 132px;
+                            height: 73px;" src="{{item.image}}" alt=""></td>
+                        <td>
+                          
+                            <button type="button" class="btn btn-success"><i class="fas fa-edit mr-2"></i></button>
+                            <button (click)="delete(item.menu_id)" type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

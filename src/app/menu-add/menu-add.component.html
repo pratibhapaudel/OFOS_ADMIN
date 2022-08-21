@@ -1,0 +1,28 @@
+<div class="card m-5 p-5">
+    <div class="card-header">
+        Add Menu
+    </div>
+    <form [formGroup]="Form" class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Category Name</label>
+            <input formControlName='category_name' type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Description</label>
+            <input formControlName='description' type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Menu Name</label>
+            <input formControlName='menu_name' type="text" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Price</label>
+            <input formControlName='price' type="text" class="form-control" id="inputPassword4">
+        </div>
+
+
+        <div class="col-12">
+            <button (click)="onSubmit()" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
